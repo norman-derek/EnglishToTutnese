@@ -1,12 +1,14 @@
-#include "Model.h"
+#include "translator.h"
 
 int main(int argc, char** argv){
 
-    Model *m = new Model();
-    char c = 'B';
+    // Translator *t = new Translator();
 
-    cout << "Single character is " << c << ", Translated string is " << m->translateSingleCharacter(c) << endl;
+    // string sentence = "I took a walk to the park yesterday";
 
-    delete m;
+    // cout << "Sentence is " << sentence << endl << ", Translated sentence is " << t->translateEnglishSentence(sentence) << endl;
+    
+
+    delete t;
     return 0;
 }

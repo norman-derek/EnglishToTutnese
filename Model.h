@@ -7,6 +7,6 @@ class Model{
     public:
     Model();
     ~Model();
-    string translateSingleCharacter(char c);
-    string translateDoubleCharacter(char c);
+    string translateSingleCharacter(char letter);
+    string translateDoubleCharacter(char letter);
 };

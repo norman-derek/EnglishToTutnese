@@ -1,4 +1,4 @@
-#include "Model.h"
+#include "model.h"
 
 Model::Model(){
 
@@ -8,6 +8,7 @@ Model::~Model(){
 
 }
 
+//translateSingleCharacter Method takes in a char and translates it to its tutnese counterpart and returns the string
 string Model::translateSingleCharacter(char letter){
     string tutnese = "";
     if (letter == 'B'){
@@ -94,8 +95,32 @@ string Model::translateSingleCharacter(char letter){
         tutnese = "Zub";
     } else if (letter == 'z') {
         tutnese = "zub";
+    } else {
+        tutnese = letter;
     }
 
     return tutnese;
 }
+
+string Model::translateDoubleCharacter(char letter){
+    string tutnese = "";
+    //only need squat because first letter of the double character will be transformed to squat and the
+    //second letter of the double character will be added to that. so in oo the first o will become squat
+    //and become the prefix for the second o and become squato in translator class
+    if (letter == 'a'){ 
+        tutnese = "squat";
+    } else if (letter == 'e') {
+        tutnese = "squat";
+    } else if (letter == 'i') {
+        tutnese = "squat";
+    } else if (letter == 'o') {
+        tutnese = "squat";
+    } else if (letter == 'u') {
+        tutnese = "squat";
+    } else {
+        tutnese = "squa"; 
+    }
+
+    return tutnese;
+} 
 
