@@ -1,18 +1,21 @@
 #include "fileprocessor.h"
 
-int main(int argc, char** argv){
+int main(int argc, char** argv){ // main method
 
-    // Translator *t = new Translator();
-    FileProcessor *fp = new FileProcessor();
+    FileProcessor *fp = new FileProcessor(); // creates file processor object to be able to use methods from file processor class
 
-    // string sentence = "I took a walk to the park yesterday";
+    if(argc < 3) { //checks to see if correct amount of arguments were provided in command line
+        cout << "whoops! sorry! There was an incorrect amount of arguments provided." << endl;
+        cout << "Please run like: \"./assignment1.out englishfile.txt tutnesefile.txt\"" << endl;
+        return -1;
+    } 
+    //first command line argument would be ./assignment1.out 
+    string input = argv[1]; // takes the 2nd argument command line which is the input file 
+    string output = argv[2]; // takes the 3rd argument command line which is the output file
 
-    // cout << "Sentence is " << sentence << endl << ", Translated sentence is " << t->translateEnglishSentence(sentence) << endl;
-    string input = argv[1];
-    string output = argv[2];
+    fp->processFile(input, output); // calls processFile method with command line arguments as arguments for method
     
-    fp->processFile(input, output);
 
-    delete fp;
+    delete fp; //deletes file processor object now that we are done using it
     return 0;
 }

@@ -1,3 +1,13 @@
+/* 
+Derek Norman
+2364922
+norman@chapman.edu
+CPSC-350-03
+Assignment 1
+*/
+
+//This file contains the logic for the Model class and translates single and double characters from english to tutnese
+
 #include "model.h"
 
 Model::Model(){
@@ -8,10 +18,14 @@ Model::~Model(){
 
 }
 
-//translateSingleCharacter Method takes in a char and translates it to its tutnese counterpart and returns the string
+/*
+* This is the translateSingleCharacter method
+* This method returns a string representing the tutnese translation of the english character
+* This method takes in a single parameter of char type representing the a character in the english language
+*/
 string Model::translateSingleCharacter(char letter){
     string tutnese = "";
-    if (letter == 'B'){
+    if (letter == 'B'){ // Capitalization is preserved for all capital letters
         tutnese = "Bub";
     } else if (letter == 'b'){
         tutnese = "bub";
@@ -102,12 +116,17 @@ string Model::translateSingleCharacter(char letter){
     return tutnese;
 }
 
+/*
+* This is the translateDoubleCharacter method
+* This method returns a string representing the tutnese translation of a english character that appeared twice in a row. 
+* This method has a single parameter of char called letter that represents an english character that appeared twice in a row 
+*/
 string Model::translateDoubleCharacter(char letter){
     string tutnese = "";
     //only need squat because first letter of the double character will be transformed to squat and the
     //second letter of the double character will be added to that. so in oo the first o will become squat
     //and become the prefix for the second o and become squato in translator class
-    if (letter == 'a'){ 
+    if (letter == 'a'){  
         tutnese = "squat";
     } else if (letter == 'e') {
         tutnese = "squat";
@@ -117,8 +136,20 @@ string Model::translateDoubleCharacter(char letter){
         tutnese = "squat";
     } else if (letter == 'u') {
         tutnese = "squat";
+    } else if (letter == 'A'){ 
+        tutnese = "Squat";
+    } else if (letter == 'E') {
+        tutnese = "Squat";
+    } else if (letter == 'I') {
+        tutnese = "Squat";
+    } else if (letter == 'O') {
+        tutnese = "Squat";
+    } else if (letter == 'U') {
+        tutnese = "Squat";
+    } else if (isupper(letter)){
+        tutnese = "Squa";
     } else {
-        tutnese = "squa"; 
+        tutnese = "squa";
     }
 
     return tutnese;

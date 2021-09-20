@@ -24,7 +24,5 @@ realclean:
 	find . -type f -name "*.o" -exec rm '{}' \;
 	find . -type f -name "*.exe" -exec rm '{}' \;
 	find . -type f -name "*.out" -exec rm '{}' \;
-	find . -type f -name "*.txt" -exec rm '{}' \;
-
 
 # this line required by make - don't delete
